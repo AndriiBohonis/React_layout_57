@@ -1,6 +1,9 @@
 import './burger.scss'
 export default function BurgerMenu({ openBurger, setOpenBurger, setStatus, status }: any) {
-	const clickMenuList = () => {
+	const clickMenuList: React.MouseEventHandler<HTMLUListElement> = (event) => {
+		if (event.currentTarget.ELEMENT_NODE) {
+		}
+
 		setStatus(status === 'open' ? 'close' : 'open')
 		setOpenBurger(openBurger === 'openMenu' ? 'closeMenu' : 'openMenu')
 	}
@@ -8,13 +11,13 @@ export default function BurgerMenu({ openBurger, setOpenBurger, setStatus, statu
 		<section className={openBurger}>
 			<nav>
 				<ul onClick={clickMenuList} className='nav_list'>
-					<li>
+					<li className='li'>
 						<a href='#description'>Бригада</a>
 					</li>
-					<li>
+					<li className='li'>
 						<a href='#history'>Історія</a>
 					</li>
-					<li>
+					<li className='li'>
 						<a href='#mission'>Місія</a>
 					</li>
 				</ul>

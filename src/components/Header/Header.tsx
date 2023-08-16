@@ -39,14 +39,13 @@ export default function Header() {
 							openBurger={openBurger}
 							setOpenBurger={setOpenBurger}
 						/>
+						<BurgerMenu
+							status={status}
+							setStatus={setStatus}
+							setOpenBurger={setOpenBurger}
+							openBurger={openBurger}
+						/>
 					</div>
-
-					<BurgerMenu
-						status={status}
-						setStatus={setStatus}
-						setOpenBurger={setOpenBurger}
-						openBurger={openBurger}
-					/>
 				</div>
 			</Wrapper>
 		</header>

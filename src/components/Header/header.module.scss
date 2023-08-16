@@ -1,3 +1,6 @@
+.burger {
+	display: none;
+}
 .header {
 	width: 100%;
 	position: fixed;
@@ -11,7 +14,7 @@
 			display: none;
 		}
 		.burger {
-			display: block;
+			display: inline-block;
 			margin-right: 20px;
 		}
 	}
@@ -26,7 +29,4 @@
 	display: flex;
 	gap: 56px;
 	font-size: 30px;
-}
-.burger {
-	display: none;
 }
