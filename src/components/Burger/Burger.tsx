@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './burger.scss'
 
 const BurgerMenu = ({ setOpenBurger, openBurger, setStatus, status }: any) => {
