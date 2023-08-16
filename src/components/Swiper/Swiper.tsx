@@ -33,8 +33,6 @@ export default function MySwiper() {
 				navigation={{
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
-					//@ts-ignore
-					clickable: true,
 				}}
 				modules={[EffectCoverflow, Pagination, Navigation, Scrollbar]}
 				className='swiper_container'
