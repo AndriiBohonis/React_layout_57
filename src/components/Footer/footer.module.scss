@@ -1,0 +1,35 @@
+.footer {
+	background: rgb(52, 49, 49);
+}
+.footer_content {
+	height: 200px;
+	color: aliceblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 30px;
+
+	p {
+		font-size: 16px;
+		color: white;
+		opacity: 40%;
+	}
+}
+.iconBlok {
+	width: 600px;
+	display: flex;
+	justify-content: space-between;
+	div {
+		display: flex;
+		align-items: center;
+		width: 40px;
+		gap: 10px;
+	}
+	@media (width< 650px) {
+		width: 250px;
+	}
+}
+.divider {
+	width: 100%;
+	border: solid 1px rgb(253, 252, 241);
+}

@@ -1,0 +1,14 @@
+.wrapper {
+	position: relative;
+	--flap: minmax(16px, 1fr);
+	--content: minmax(var(--min-width), var(--max-width));
+
+	display: grid;
+	grid-template-columns:
+		var(--flap)
+		var(--content)
+		var(--flap);
+}
+.content_wrapper {
+	grid-column: 2 / 3;
+}

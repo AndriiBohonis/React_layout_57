@@ -1,0 +1,87 @@
+.BurgerMenu__container {
+	display: flex;
+	flex-direction: column;
+	padding-left: 8px;
+
+	i {
+		background-color: gray;
+		width: 32px;
+		height: 4px;
+		margin: 4px;
+
+		transition: all ease 0.5s;
+	}
+
+	.open:nth-child(1) {
+		transform: rotate(45deg) translateY(8px) translateX(8px);
+	}
+
+	.open:nth-child(2) {
+		opacity: 0;
+		transition: 0s;
+	}
+
+	.open:nth-child(3) {
+		transform: rotate(-45deg) translateY(-8px) translateX(8px);
+	}
+
+	.close:nth-child(1) {
+		transform: rotate(0) translateY(0);
+	}
+
+	.close:nth-child(2) {
+		opacity: 1;
+	}
+
+	.close:nth-child(3) {
+		transform: rotate(0) translateY(0);
+	}
+}
+.nav_list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 30px;
+	font-size: 30px;
+	padding: 30px 20px;
+}
+.closeMenu {
+	position: absolute;
+	top: 120px;
+	right: 0;
+	height: 300px;
+	width: 100%;
+	background-color: rgb(217, 227, 79);
+	opacity: 0;
+	animation: closeM 0.5s;
+}
+.openMenu {
+	position: absolute;
+	top: 120px;
+	right: 0;
+	height: 300px;
+	width: 100%;
+	background-color: rgb(217, 227, 79);
+	animation: openM 0.5s;
+}
+@keyframes openM {
+	from {
+		height: 0;
+		opacity: 0;
+	}
+	to {
+		height: 300px;
+		opacity: 1;
+	}
+}
+@keyframes closeM {
+	from {
+		height: 300px;
+		opacity: 1;
+	}
+	to {
+		height: 0;
+		opacity: 0;
+	}
+}

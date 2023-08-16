@@ -1,0 +1,21 @@
+.button {
+	width: 198px;
+	height: 58px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	background-color: orange;
+	transition: 0.5s;
+	cursor: pointer;
+	&:hover {
+		background-color: #e79807;
+	}
+	@media (width <500px) {
+		width: 100px;
+		height: 40px;
+	}
+}
+.large {
+	width: 380px;
+}

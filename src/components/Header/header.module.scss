@@ -1,0 +1,32 @@
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	background: white;
+	@media (width< 880px) {
+		.button,
+		.nav_list {
+			display: none;
+		}
+		.burger {
+			display: block;
+			margin-right: 20px;
+		}
+	}
+}
+.header_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 120px;
+}
+.nav_list {
+	display: flex;
+	gap: 56px;
+	font-size: 30px;
+}
+.burger {
+	display: none;
+}
