@@ -7,12 +7,14 @@ import Hero from './components/Hero/Hero'
 import History from './components/History/History'
 import Mission from './components/Mission/Mission'
 import Quotation from './components/Quotation/Quotation'
+import Swiper from './components/Swiper/Swiper'
 
 function App() {
 	return (
 		<>
 			<div id={'/'}></div>
 			<Header />
+			<Swiper />
 			<Hero />
 			<Divider />
 			<Description />

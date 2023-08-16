@@ -1,24 +1,104 @@
 import icon from '../../assets/icons/4.svg'
-import { Wrapper } from '../../hoc/Wrapper/Wrapper'
-import s from './divider.module.scss'
+import './divider.css'
 export default function Divider() {
+	const str = [
+		icon,
+		'#МАЙБУТНЄ',
+		'#СВОБОДА',
+		'#ЗЕМЛЯ',
+		'#РОДИНА',
+		'#СИЛА',
+		'#ЗАХИСТ',
+		'#ВОЛЯ',
+		'#НАЦІЯ',
+		icon,
+		'#МАЙБУТНЄ',
+		'#СВОБОДА',
+		'#ЗЕМЛЯ',
+		'#РОДИНА',
+		'#СИЛА',
+		'#ЗАХИСТ',
+		'#ВОЛЯ',
+		'#НАЦІЯ',
+		icon,
+		'#МАЙБУТНЄ',
+		'#СВОБОДА',
+		'#ЗЕМЛЯ',
+		'#РОДИНА',
+		'#СИЛА',
+		'#ЗАХИСТ',
+		'#ВОЛЯ',
+		'#НАЦІЯ',
+		icon,
+		'#МАЙБУТНЄ',
+		'#СВОБОДА',
+		'#ЗЕМЛЯ',
+		'#РОДИНА',
+		'#СИЛА',
+		'#ЗАХИСТ',
+		'#ВОЛЯ',
+		'#НАЦІЯ',
+		icon,
+		'#МАЙБУТНЄ',
+		'#СВОБОДА',
+		'#ЗЕМЛЯ',
+		'#РОДИНА',
+		'#СИЛА',
+		'#ЗАХИСТ',
+		'#ВОЛЯ',
+		'#НАЦІЯ',
+		icon,
+		'#МАЙБУТНЄ',
+		'#СВОБОДА',
+		'#ЗЕМЛЯ',
+		'#РОДИНА',
+		'#СИЛА',
+		'#ЗАХИСТ',
+		'#ВОЛЯ',
+		'#НАЦІЯ',
+	]
+
+	console.log(str)
 	return (
-		<section className={s.divider}>
-			<Wrapper>
-				<ul className={s.divider_list}>
-					<li>
-						<img src={icon}></img>
-					</li>
-					<li>#МАЙБУТНЄ</li>
-					<li>#СВОБОДА</li>
-					<li>#ЗЕМЛЯ</li>
-					<li>#РОДИНА</li>
-					<li>#СИЛА</li>
-					<li>#ЗАХИСТ</li>
-					<li>#ВОЛЯ</li>
-					<li>#НАЦІЯ</li>
-				</ul>
-			</Wrapper>
+		<section className='ticker-tape'>
+			{/* <Wrapper> */}
+			<ul className='ticker'>
+				{/* <li className='ticker__item'>
+					<img src={icon}></img>
+				</li>
+				<li className='ticker__item'>#МАЙБУТНЄ</li>
+				<li className='ticker__item'>#СВОБОДА</li>
+				<li className='ticker__item'>#ЗЕМЛЯ</li>
+				<li className='ticker__item'>#РОДИНА</li>
+				<li className='ticker__item'>#СИЛА</li>
+				<li className='ticker__item'>#ЗАХИСТ</li>
+				<li className='ticker__item'>#ВОЛЯ</li>
+				<li className='ticker__item'>#НАЦІЯ</li>
+				<li className='ticker__item'>
+					<img src={icon}></img>
+				</li>
+				<li className='ticker__item'>#МАЙБУТНЄ</li>
+				<li className='ticker__item'>#СВОБОДА</li>
+				<li className='ticker__item'>#ЗЕМЛЯ</li>
+				<li className='ticker__item'>#РОДИНА</li>
+				<li className='ticker__item'>#СИЛА</li>
+				<li className='ticker__item'>#ЗАХИСТ</li>
+				<li className='ticker__item'>#ВОЛЯ</li>
+				<li className='ticker__item'>#НАЦІЯ</li> */}
+				{str.map((item) => {
+					if (item.length > 15) {
+						return (
+							<li className='ticker__item'>
+								<img src={item}></img>
+							</li>
+						)
+					}
+
+					return <li className='ticker__item'>{item}</li>
+				})}
+			</ul>
+
+			{/* </Wrapper> */}
 		</section>
 	)
 }
