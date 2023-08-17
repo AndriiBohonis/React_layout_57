@@ -1,18 +1,19 @@
+import { EffectCoverflow, Navigation, Pagination, Scrollbar } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { EffectCoverflow, Navigation, Pagination, Scrollbar } from 'swiper/modules'
+import a7 from '../../assets/foto/1.jpg'
+import a6 from '../../assets/foto/2.jpg'
+import a1 from '../../assets/foto/3.jpg'
+import a2 from '../../assets/foto/4.jpg'
+import a4 from '../../assets/foto/6.jpg'
+import a5 from '../../assets/foto/7.jpg'
+import a3 from '../../assets/foto/8.jpg'
+
 import { Wrapper } from '../../hoc/Wrapper/Wrapper'
-import a7 from '../../imgs/3.jpg'
-import a6 from '../../imgs/4.jpg'
-import a1 from '../../imgs/5.jpg'
-import a2 from '../../imgs/6.jpg'
-import a3 from '../../imgs/7.jpg'
-import a4 from '../../imgs/8.jpg'
-import a5 from '../../imgs/9.jpg'
 import './swiper.css'
 export default function MySwiper() {
 	return (
@@ -83,12 +84,8 @@ export default function MySwiper() {
 					</SwiperSlide>
 
 					<div className='slider-controler'>
-						<div className='swiper-button-prev arrow '>
-							{/* <ion-icon name='arrow-back-outline'></ion-icon> */}
-						</div>
-						<div className='swiper-button-next arrow'>
-							{/* <ion-icon name='arrow-forward-outline'></ion-icon> */}
-						</div>
+						<div className='swiper-button-prev arrow '></div>
+						<div className='swiper-button-next arrow'></div>
 						<div className='swiper-pagination'></div>
 					</div>
 				</Swiper>
