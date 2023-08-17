@@ -15,7 +15,7 @@ export default function Footer() {
 							<img src={logo}></img>
 							<img src={logo57}></img>
 						</div>
-						<div>
+						<div className={s.svg}>
 							<img src={fee}></img>
 							<img src={ins}></img>
 							<img src={te}></img>
