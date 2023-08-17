@@ -25,7 +25,7 @@
 		width: 40px;
 		gap: 10px;
 	}
-	@media (width< 650px) {
+	@media (max-width: 650px) {
 		width: 200px;
 	}
 }
