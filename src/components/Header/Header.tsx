@@ -2,13 +2,9 @@ import { useState } from 'react'
 import Logo from '../../assets/icons/Logo57.svg'
 import { Wrapper } from '../../hoc/Wrapper/Wrapper'
 import Burger from '../Burger/Burger'
-import BurgerMenu from '../Burger/BurgerMenu'
 import Button from '../Button/Button'
 import s from './header.module.scss'
 export default function Header() {
-	const [openBurger, setOpenBurger] = useState('closeMenu')
-	const [status, setStatus] = useState('close')
-
 	return (
 		<header className={s.header}>
 			<Wrapper>
@@ -33,19 +29,9 @@ export default function Header() {
 						<Button />
 					</div>
 					<div className={s.burger}>
-						<Burger
-							status={status}
-							setStatus={setStatus}
-							openBurger={openBurger}
-							setOpenBurger={setOpenBurger}
-						/>
+						<Burger />
 
-						<BurgerMenu
-							status={status}
-							setStatus={setStatus}
-							setOpenBurger={setOpenBurger}
-							openBurger={openBurger}
-						/>
+						{/* <BurgerMenu viewMenu={viewMenu} setViewMenu={setViewMenu} status={status} setStatus={setStatus}/> */}
 					</div>
 				</div>
 			</Wrapper>

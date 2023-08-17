@@ -5,6 +5,7 @@ import 'swiper/css/effect-coverflow'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { EffectCoverflow, Navigation, Pagination, Scrollbar } from 'swiper/modules'
+import { Wrapper } from '../../hoc/Wrapper/Wrapper'
 import a7 from '../../imgs/3.jpg'
 import a6 from '../../imgs/4.jpg'
 import a1 from '../../imgs/5.jpg'
@@ -15,81 +16,83 @@ import a5 from '../../imgs/9.jpg'
 import './swiper.css'
 export default function MySwiper() {
 	return (
-		<div className='container'>
-			<Swiper
-				effect={'coverflow'}
-				grabCursor={true}
-				centeredSlides={true}
-				loop={true}
-				slidesPerView={'auto'}
-				scrollbar={{ draggable: true }}
-				coverflowEffect={{
-					rotate: 0,
-					stretch: 1,
-					depth: 110,
-					modifier: 2,
-				}}
-				pagination={{ el: '.swiper-pagination', clickable: true }}
-				navigation={{
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				}}
-				modules={[EffectCoverflow, Pagination, Navigation, Scrollbar]}
-				className='swiper_container'
-			>
-				<SwiperSlide>
-					<img src={a1} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a2} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a3} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a4} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a5} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a6} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a7} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a1} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a2} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a3} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a4} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a5} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a6} alt='slide_image' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={a7} alt='slide_image' />
-				</SwiperSlide>
+		<Wrapper>
+			<div className='container'>
+				<Swiper
+					effect={'coverflow'}
+					grabCursor={true}
+					centeredSlides={true}
+					loop={true}
+					slidesPerView={'auto'}
+					scrollbar={{ draggable: true }}
+					coverflowEffect={{
+						rotate: 0,
+						stretch: 1,
+						depth: 100,
+						modifier: 2.9,
+					}}
+					pagination={{ el: '.swiper-pagination', clickable: true }}
+					navigation={{
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					}}
+					modules={[EffectCoverflow, Pagination, Navigation, Scrollbar]}
+					className='swiper_container'
+				>
+					<SwiperSlide>
+						<img src={a1} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a2} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a3} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a4} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a5} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a6} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a7} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a1} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a2} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a3} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a4} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a5} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a6} alt='slide_image' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={a7} alt='slide_image' />
+					</SwiperSlide>
 
-				<div className='slider-controler'>
-					<div className='swiper-button-prev slider-arrow'>
-						{/* <ion-icon name='arrow-back-outline'></ion-icon> */}
+					<div className='slider-controler'>
+						<div className='swiper-button-prev arrow '>
+							{/* <ion-icon name='arrow-back-outline'></ion-icon> */}
+						</div>
+						<div className='swiper-button-next arrow'>
+							{/* <ion-icon name='arrow-forward-outline'></ion-icon> */}
+						</div>
+						<div className='swiper-pagination'></div>
 					</div>
-					<div className='swiper-button-next slider-arrow'>
-						{/* <ion-icon name='arrow-forward-outline'></ion-icon> */}
-					</div>
-					<div className='swiper-pagination'></div>
-				</div>
-			</Swiper>
-		</div>
+				</Swiper>
+			</div>
+		</Wrapper>
 	)
 }

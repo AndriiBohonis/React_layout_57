@@ -1,5 +1,6 @@
 import icon from '../../assets/icons/4.svg'
-import './divider.css'
+import { InfiniteLooper } from './Looper'
+
 export default function Divider() {
 	const str = [
 		icon,
@@ -11,94 +12,29 @@ export default function Divider() {
 		'#ЗАХИСТ',
 		'#ВОЛЯ',
 		'#НАЦІЯ',
-		icon,
-		'#МАЙБУТНЄ',
-		'#СВОБОДА',
-		'#ЗЕМЛЯ',
-		'#РОДИНА',
-		'#СИЛА',
-		'#ЗАХИСТ',
-		'#ВОЛЯ',
-		'#НАЦІЯ',
-		icon,
-		'#МАЙБУТНЄ',
-		'#СВОБОДА',
-		'#ЗЕМЛЯ',
-		'#РОДИНА',
-		'#СИЛА',
-		'#ЗАХИСТ',
-		'#ВОЛЯ',
-		'#НАЦІЯ',
-		icon,
-		'#МАЙБУТНЄ',
-		'#СВОБОДА',
-		'#ЗЕМЛЯ',
-		'#РОДИНА',
-		'#СИЛА',
-		'#ЗАХИСТ',
-		'#ВОЛЯ',
-		'#НАЦІЯ',
-		icon,
-		'#МАЙБУТНЄ',
-		'#СВОБОДА',
-		'#ЗЕМЛЯ',
-		'#РОДИНА',
-		'#СИЛА',
-		'#ЗАХИСТ',
-		'#ВОЛЯ',
-		'#НАЦІЯ',
-		icon,
-		'#МАЙБУТНЄ',
-		'#СВОБОДА',
-		'#ЗЕМЛЯ',
-		'#РОДИНА',
-		'#СИЛА',
-		'#ЗАХИСТ',
-		'#ВОЛЯ',
-		'#НАЦІЯ',
 	]
 
-	console.log(str)
 	return (
-		<section className='ticker-tape'>
-			{/* <Wrapper> */}
-			<ul className='ticker'>
-				{/* <li className='ticker__item'>
-					<img src={icon}></img>
-				</li>
-				<li className='ticker__item'>#МАЙБУТНЄ</li>
-				<li className='ticker__item'>#СВОБОДА</li>
-				<li className='ticker__item'>#ЗЕМЛЯ</li>
-				<li className='ticker__item'>#РОДИНА</li>
-				<li className='ticker__item'>#СИЛА</li>
-				<li className='ticker__item'>#ЗАХИСТ</li>
-				<li className='ticker__item'>#ВОЛЯ</li>
-				<li className='ticker__item'>#НАЦІЯ</li>
-				<li className='ticker__item'>
-					<img src={icon}></img>
-				</li>
-				<li className='ticker__item'>#МАЙБУТНЄ</li>
-				<li className='ticker__item'>#СВОБОДА</li>
-				<li className='ticker__item'>#ЗЕМЛЯ</li>
-				<li className='ticker__item'>#РОДИНА</li>
-				<li className='ticker__item'>#СИЛА</li>
-				<li className='ticker__item'>#ЗАХИСТ</li>
-				<li className='ticker__item'>#ВОЛЯ</li>
-				<li className='ticker__item'>#НАЦІЯ</li> */}
-				{str.map((item) => {
-					if (item.length > 15) {
+		<section>
+			<ul className='animationList'>
+				<InfiniteLooper speed={19} direction='left'>
+					{str.map((item) => {
+						if (item.length > 15) {
+							return (
+								<li key={item} className='ticker__item'>
+									<img src={item}></img>
+								</li>
+							)
+						}
+
 						return (
-							<li className='ticker__item'>
-								<img src={item}></img>
+							<li key={item} className='ticker__item'>
+								{item}
 							</li>
 						)
-					}
-
-					return <li className='ticker__item'>{item}</li>
-				})}
+					})}
+				</InfiniteLooper>
 			</ul>
-
-			{/* </Wrapper> */}
 		</section>
 	)
 }

@@ -1,0 +1,41 @@
+/* Looper styles */
+@keyframes slideAnim {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.looper {
+	width: 100%;
+	overflow: hidden;
+}
+
+.looper__innerList {
+	display: flex;
+	justify-content: center;
+	width: fit-content;
+}
+
+.looper__innerList[data-animate='true'] .looper__listInstance {
+	animation: slideAnim linear infinite;
+}
+
+.looper__listInstance {
+	display: flex;
+	width: max-content;
+
+	animation: none;
+}
+
+.animationList li {
+	padding: 0 20px;
+	height: 40px;
+	font-size: 20px;
+	color: black;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+}

@@ -54,21 +54,10 @@ html {
 	background: #f9f9f9;
 }
 
-body {
-	font-size: 1.6rem;
-	background: var(--bg);
-}
-
 .container {
-	max-width: 124rem;
+	max-width: calc(100% -400px);
 	padding: 4rem 1rem;
 	margin: 100px auto;
-}
-
-.heading {
-	padding: 1rem 0;
-	font-size: 3.5rem;
-	text-align: center;
 }
 
 .swiper_container {
@@ -111,10 +100,11 @@ body {
 .slider-controler {
 	position: relative;
 	bottom: 2rem;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
+}
+.arrow {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
 }
 
 /* .swiper-button-next {

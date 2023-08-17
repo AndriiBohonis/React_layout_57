@@ -14,8 +14,8 @@ function App() {
 		<>
 			<div id={'/'}></div>
 			<Header />
-			<Swiper />
 			<Hero />
+			<Swiper />
 			<Divider />
 			<Description />
 			<Quotation />

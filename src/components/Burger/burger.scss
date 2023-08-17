@@ -37,7 +37,17 @@
 		transform: rotate(0) translateY(0);
 	}
 }
+.burgerWrap {
+	position: absolute;
+	top: 120px;
+	height: 100vh;
+	right: 0;
+	width: 100%;
+	background-color: rgba(231, 232, 226, 0.3);
+	border-top: solid 1px rgb(31, 30, 30);
+}
 .nav_list {
+	background: white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -47,25 +57,12 @@
 	padding: 30px 20px;
 }
 .closeMenu {
-	position: absolute;
-	top: 120px;
-	right: 0;
-	height: 300px;
-	width: 100%;
-	background-color: rgb(217, 227, 79);
-	opacity: 0;
-	animation: closeM 0.5s;
+	animation: close 5s;
 }
 .openMenu {
-	position: absolute;
-	top: 120px;
-	right: 0;
-	height: 300px;
-	width: 100%;
-	background-color: rgb(217, 227, 79);
-	animation: openM 0.5s;
+	animation: open 1s;
 }
-@keyframes openM {
+@keyframes open {
 	from {
 		height: 0;
 		opacity: 0;
@@ -75,7 +72,7 @@
 		opacity: 1;
 	}
 }
-@keyframes closeM {
+@keyframes close {
 	from {
 		height: 300px;
 		opacity: 1;
