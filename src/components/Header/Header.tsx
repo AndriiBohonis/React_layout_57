@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Logo from '../../assets/icons/Logo57.svg'
 import { Wrapper } from '../../hoc/Wrapper/Wrapper'
 import Burger from '../Burger/Burger'
@@ -30,8 +29,6 @@ export default function Header() {
 					</div>
 					<div className={s.burger}>
 						<Burger />
-
-						{/* <BurgerMenu viewMenu={viewMenu} setViewMenu={setViewMenu} status={status} setStatus={setStatus}/> */}
 					</div>
 				</div>
 			</Wrapper>
