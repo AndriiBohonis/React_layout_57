@@ -8,16 +8,6 @@
 	left: 0;
 	z-index: 11;
 	background: white;
-	@media (width< 880px) {
-		.button,
-		.nav_list {
-			display: none;
-		}
-		.burger {
-			display: block;
-			margin-right: 20px;
-		}
-	}
 }
 .header_container {
 	display: flex;
@@ -29,4 +19,14 @@
 	display: flex;
 	gap: 56px;
 	font-size: 30px;
+}
+@media (max-width: 880px) {
+	.button,
+	.nav_list {
+		display: none;
+	}
+	.burger {
+		display: block;
+		margin-right: 20px;
+	}
 }
