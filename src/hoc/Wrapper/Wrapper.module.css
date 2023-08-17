@@ -8,6 +8,6 @@
 		var(--content)
 		var(--flap);
 }
-.content_wrapper {
+.content {
 	grid-column: 2 / 3;
 }
